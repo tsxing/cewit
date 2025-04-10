@@ -21,7 +21,7 @@ const arr2 = [
   null,
   null,
   null,
-  null,
+  1495,// this is a real datapoint
   1259.92,// starts at 17
   1368.31,
   1476.70,
