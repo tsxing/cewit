@@ -87,7 +87,6 @@ const theChartPart3 = new Chart(ctx3, {
     labels: sevenToSixteen.concat([2017, 2018, 2019, 2020, 2021, 2022]),
     datasets: [
       {
-        label: "Phone Sales from 2007 to 2016",
         data: arr.concat([1536, 1556, 1540, 1351, 1433, 1395]),
         borderWidth: 1,
       },
