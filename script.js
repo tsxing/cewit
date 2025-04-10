@@ -90,7 +90,6 @@ const theChartPart3 = new Chart(ctx, {
         label: "Phone Sales from 2007 to 2016",
         data: arr,
         borderWidth: 1,
-        fill: true,
       },
     ],
   },
