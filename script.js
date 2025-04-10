@@ -1,25 +1,58 @@
 const arr = [
-  [2007, 122],
-  [2008, 139],
-  [2009, 172],
-  [2010, 296],
-  [2011, 472],
-  [2012, 680],
-  [2013, 969],
-  [2014, 1244],
-  [2015, 1423],
-  [2016, 1495],
+  122,// starts at 07
+  139,
+  172,
+  296,
+  472,
+  680,
+  969,
+  1244,
+  1423,
+  1495
 ];
 
+const arr2 = [
+  1259.92,// starts at 17
+  1368.31,
+  1476.70,
+  1585.10,
+  1693.49,
+  1801.88,
+  1910.28,
+  2018.67,
+  2127.06,
+  2235.45,
+  2343.85,
+  2452.24,
+  2560.63,
+  2669.02,
+];
+
+const sevenToSixteen = Object.freeze([2007,2008,2009,2010,2011,2012,2013,2014,2015,2016]);
+const sevenToThirty = Object.freeze(sevenToSixteen.concat([2017,2018,2019,2020,2021,2022,2023,2024,2025,2026,2027,2028,2029,2030]));
+
 const ctx = document.getElementById("chart");
+const ctx2 = document.getElementById("chart2");
 
 const theChart = new Chart(ctx, {
   type: "line",
   data: {
-    labels: arr.map((v) => {
-      // create array from column 1
-      return v[0];
-    }),
+    labels: sevenToSixteen,
+    datasets: [
+      {
+        label: "Phone Sales in millions",
+        data: arr,
+        borderWidth: 1,
+        fill: true,
+      },
+    ],
+  },
+});
+
+const theChartPart2 = new Chart(ctx2, {
+  type: "line",
+  data: {
+    labels: sevenToThirty,
     datasets: [
       {
         label: "Phone Sales in millions",
@@ -27,6 +60,12 @@ const theChart = new Chart(ctx, {
           // create array from column 2
           return v[1];
         }),
+        borderWidth: 1,
+        fill: true,
+      },
+      {
+        label: "Predicted Phone Sales in millions",
+        data: arr2,
         borderWidth: 1,
         fill: true,
       },
