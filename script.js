@@ -43,6 +43,7 @@ const sevenToThirty = Object.freeze(sevenToSixteen.concat([2017,2018,2019,2020,2
 
 const ctx = document.getElementById("chart");
 const ctx2 = document.getElementById("chart2");
+const ctx3 = document.getElementById("chart3");
 
 const theChart = new Chart(ctx, {
   type: "line",
@@ -73,6 +74,21 @@ const theChartPart2 = new Chart(ctx2, {
       {
         label: "Predicted Phone Sales in millions",
         data: arr2,
+        borderWidth: 1,
+        fill: true,
+      },
+    ],
+  },
+});
+
+const theChartPart3 = new Chart(ctx, {
+  type: "doughnut",
+  data: {
+    labels: sevenToSixteen,
+    datasets: [
+      {
+        label: "Phone Sales from 2007 to 2016",
+        data: arr,
         borderWidth: 1,
         fill: true,
       },
