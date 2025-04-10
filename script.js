@@ -88,7 +88,7 @@ const theChartPart3 = new Chart(ctx3, {
     datasets: [
       {
         label: "Phone Sales from 2007 to 2016",
-        data: arr,
+        data: arr.concat([1536, 1556, 1540, 1351, 1433, 1395]),
         borderWidth: 1,
       },
     ],
