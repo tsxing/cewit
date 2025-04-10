@@ -93,4 +93,13 @@ const theChartPart3 = new Chart(ctx3, {
       },
     ],
   },
+  overrides: {
+    doughnut: {
+      plugins: {
+        legend: {
+          display: false,
+        }
+      }
+    }
+  }
 });
