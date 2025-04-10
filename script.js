@@ -56,10 +56,7 @@ const theChartPart2 = new Chart(ctx2, {
     datasets: [
       {
         label: "Phone Sales in millions",
-        data: arr.map((v) => {
-          // create array from column 2
-          return v[1];
-        }),
+        data: arr,
         borderWidth: 1,
         fill: true,
       },
