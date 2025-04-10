@@ -81,7 +81,7 @@ const theChartPart2 = new Chart(ctx2, {
   },
 });
 
-const theChartPart3 = new Chart(ctx, {
+const theChartPart3 = new Chart(ctx3, {
   type: "doughnut",
   data: {
     labels: sevenToSixteen,
